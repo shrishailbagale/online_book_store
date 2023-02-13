@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+</head>
+<style>
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 1rem;
+	background-color: transparent
+}
+
+.table td, .table th {
+	padding: .75rem;
+	vertical-align: top;
+	border-top: 1px solid #dee2e6
+}
+
+.table thead th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #dee2e6
+}
+
+.table tbody+tbody {
+	border-top: 2px solid #dee2e6
+}
+
+.table .table {
+	background-color: #fff
+}
+
+.table-sm td, .table-sm th {
+	padding: .3rem
+}
+
+.table-bordered {
+	border: 1px solid #dee2e6
+}
+
+.table-bordered td, .table-bordered th {
+	border: 1px solid #dee2e6
+}
+
+.table-bordered thead td, .table-bordered thead th {
+	border-bottom-width: 2px
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: rgba(0, 0, 0, .05)
+}
+
+.table-hover tbody tr:hover {
+	background-color: rgba(0, 0, 0, .075)
+}
+
+.table-primary, .table-primary>td, .table-primary>th {
+	background-color: #b8daff
+}
+
+.table-hover .table-primary:hover {
+	background-color: #9fcdff
+}
+
+.table-hover .table-primary:hover>td, .table-hover .table-primary:hover>th
+	{
+	background-color: #9fcdff
+}
+
+.table-secondary, .table-secondary>td, .table-secondary>th {
+	background-color: #d6d8db
+}
+
+.table-hover .table-secondary:hover {
+	background-color: #c8cbcf
+}
+
+.table-hover .table-secondary:hover>td, .table-hover .table-secondary:hover>th
+	{
+	background-color: #c8cbcf
+}
+
+.table-success, .table-success>td, .table-success>th {
+	background-color: #c3e6cb
+}
+
+.table-hover .table-success:hover {
+	background-color: #b1dfbb
+}
+
+.table-hover .table-success:hover>td, .table-hover .table-success:hover>th
+	{
+	background-color: #b1dfbb
+}
+
+.table-info, .table-info>td, .table-info>th {
+	background-color: #bee5eb
+}
+
+.table-hover .table-info:hover {
+	background-color: #abdde5
+}
+
+.table-hover .table-info:hover>td, .table-hover .table-info:hover>th {
+	background-color: #abdde5
+}
+
+.table-warning, .table-warning>td, .table-warning>th {
+	background-color: #ffeeba
+}
+
+.table-hover .table-warning:hover {
+	background-color: #ffe8a1
+}
+
+.table-hover .table-warning:hover>td, .table-hover .table-warning:hover>th
+	{
+	background-color: #ffe8a1
+}
+
+.table-danger, .table-danger>td, .table-danger>th {
+	background-color: #f5c6cb
+}
+
+.table-hover .table-danger:hover {
+	background-color: #f1b0b7
+}
+
+.table-hover .table-danger:hover>td, .table-hover .table-danger:hover>th
+	{
+	background-color: #f1b0b7
+}
+
+.table-light, .table-light>td, .table-light>th {
+	background-color: #fdfdfe
+}
+
+.table-hover .table-light:hover {
+	background-color: #ececf6
+}
+
+.table-hover .table-light:hover>td, .table-hover .table-light:hover>th {
+	background-color: #ececf6
+}
+
+.table-dark, .table-dark>td, .table-dark>th {
+	background-color: #c6c8ca
+}
+
+.table-hover .table-dark:hover {
+	background-color: #b9bbbe
+}
+
+.table-hover .table-dark:hover>td, .table-hover .table-dark:hover>th {
+	background-color: #b9bbbe
+}
+
+.table-active, .table-active>td, .table-active>th {
+	background-color: rgba(0, 0, 0, .075)
+}
+
+.table-hover .table-active:hover {
+	background-color: rgba(0, 0, 0, .075)
+}
+
+.table-hover .table-active:hover>td, .table-hover .table-active:hover>th
+	{
+	background-color: rgba(0, 0, 0, .075)
+}
+
+.table .thead-dark th {
+	color: #fff;
+	background-color: #212529;
+	border-color: #32383e
+}
+
+.table .thead-light th {
+	color: #495057;
+	background-color: #e9ecef;
+	border-color: #dee2e6
+}
+
+.table-dark {
+	color: #fff;
+	background-color: #212529
+}
+
+.table-dark td, .table-dark th, .table-dark thead th {
+	border-color: #32383e
+}
+
+.table-dark.table-bordered {
+	border: 0
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+	background-color: rgba(255, 255, 255, .05)
+}
+
+.table-dark.table-hover tbody tr:hover {
+	background-color: rgba(255, 255, 255, .075)
+}
+
+@media ( max-width :575.98px) {
+	.table-responsive-sm {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar
+	}
+	.table-responsive-sm>.table-bordered {
+		border: 0
+	}
+}
+
+@media ( max-width :767.98px) {
+	.table-responsive-md {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar
+	}
+	.table-responsive-md>.table-bordered {
+		border: 0
+	}
+}
+
+@media ( max-width :991.98px) {
+	.table-responsive-lg {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar
+	}
+	.table-responsive-lg>.table-bordered {
+		border: 0
+	}
+}
+
+@media ( max-width :1199.98px) {
+	.table-responsive-xl {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar
+	}
+	.table-responsive-xl>.table-bordered {
+		border: 0
+	}
+}
+
+.table-responsive {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar
+}
+
+.table-responsive>.table-bordered {
+	border: 0
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.table td, .table th {
+	padding: 0.75rem;
+}
+
+.declaimer {
+	display: none;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.bg-light {
+	background-color: #f8f9fa !important
+}
+
+.text-info {
+	color: #17a2b8 !important
+}
+</style>
+<body>
+
+	<div class="container">
+		<h4 class="text-danger text-center">Resume</h4>
+		<table class="table table-bordered table-responsive-sm table-hover">
+			<tbody class="">
+				<tr>
+					<th class="text-info bg-light" colspan="12">PERSONAL DETAILS</th>
+
+				</tr>
+				<tr>
+					<th scope="row">Name</th>
+					<td colspan="10">Shrishail Bagale</td>
+					<td rowspan="4" class="text-right"><img alt="" src="../1.jpg"
+						style="min-width: 20px; max-width: 200px; min-height: 20px; max-height: 200px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Email ID</th>
+					<td colspan="10">shrishailbagale3@gmail.com</td>
+				</tr>
+				<tr>
+					<th scope="row">Mobile Number</th>
+					<td colspan="5">+91 8888988708</td>
+					<td colspan="5"><b>Nationality:</b> Indian</td>
+				</tr>
+				<tr>
+					<th scope="row">Date of Birth</th>
+					<td colspan="5">27/04/2000</td>
+					<td colspan="5"><b>Gender:</b> Male</td>
+
+
+
+				</tr>
+				<tr>
+					<th scope="row">Address</th>
+					<td colspan="11">At post Malkavathe, tal.-South Solapur,
+						Dist.-Solapur, Maharashtra 413221</td>
+				</tr>
+				<tr>
+					<th class="text-info bg-light" colspan="12">ACADEMIC DETAILS</th>
+				</tr>
+				<tr>
+					<th colspan="1">Year</th>
+					<th colspan="4">Course</th>
+					<th colspan="4">Institute/College</th>
+					<th colspan="2">Board/University</th>
+					<th colspan="2">Percentage</th>
+				</tr>
+				<tr>
+					<td colspan="1" scope="row">2021-23 (Pursuing)</td>
+					<td colspan="4" scope="row">Master of Computer Application</td>
+					<td colspan="4" scope="row">Allana Institute of Management
+						Science, Pune</td>
+					<td colspan="2" scope="row">Pune University</td>
+					<td colspan="2" scope="row">-</td>
+				</tr>
+				<tr>
+					<td colspan="1">2021</td>
+					<td colspan="4">Bachalor of Computer Science</td>
+					<td colspan="4">DHB Soni College, Solapur</td>
+					<td colspan="2">Solapur University</td>
+					<td colspan="2">70.08%</td>
+				</tr>
+				<tr>
+					<td colspan="1">2018</td>
+					<td colspan="4">12th</td>
+					<td colspan="4">Lokseva Vidyamandir, Mandrup</td>
+					<td colspan="2">Pune Board</td>
+					<td colspan="2">65.69%</td>
+				</tr>
+				<tr>
+					<td colspan="1">2016</td>
+					<td colspan="4">10th</td>
+					<td colspan="4">Shri Panchakshari High School, Malkavathe</td>
+					<td colspan="2">Pune Board</td>
+					<td colspan="2">76%</td>
+				</tr>
+				<tr>
+					<th class="text-info bg-light" colspan="12">CERTIFICATION</th>
+				</tr>
+				<tr>
+					<th colspan="4">Course Name</th>
+					<th colspan="8">Certifying Authority</th>
+				</tr>
+				<tr>
+					<td colspan="4"><a href="/certificate/java_programming.pdf">Java
+							Programming</a></td>
+					<td colspan="8">Udemy</td>
+				</tr>
+				<tr>
+					<td colspan="4"><a href="/certificate/html_css_javascript.pdf">HTML,
+							CSS, Javascript</a></td>
+					<td colspan="8">Alison</td>
+				</tr>
+				<tr>
+					<th class="text-info bg-light" colspan="12">SKILLS AND
+						LANGUAGE</th>
+				</tr>
+				<tr>
+					<th colspan="4">Skills</th>
+					<td colspan="8">Java, Python, HTML, CSS, PHP, MySQL, Boostrap</td>
+				</tr>
+				<tr>
+					<th colspan="4">Language</th>
+					<td colspan="8">Marathi, Hindi, English</td>
+				</tr>
+				<tr>
+					<th class="text-info bg-light" colspan="12">PROJECT AND
+						INTERNSHIPS</th>
+				</tr>
+				<tr>
+					<th colspan="4">Project Name</th>
+					<th colspan="8">Skills and Software Used
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">Library Management System</td>
+					<td colspan="8" scope="row">C#, MS SQL Server, Visual Studio</td>
+				</tr>
+				<tr>
+					<td colspan="4">E-Book Management System</td>
+					<td colspan="8">HTML, CSS, Java, Boostrap, Servlet, Eclipe,
+						MySQL</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
