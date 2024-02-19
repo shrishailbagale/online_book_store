@@ -32,13 +32,7 @@
 				<td>Pune</td>
 
 			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Alwyn Rodrigues</td>
-				<td>alwyn@gmail.com</td>
-				<td>9886545455</td>
-					<td>Pune</td>
-				</tr>
+			
 		</tbody>
 	</table>
 	</div>

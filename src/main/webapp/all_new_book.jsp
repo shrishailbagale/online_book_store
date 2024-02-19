@@ -46,12 +46,10 @@
 					<div class="card-body text-center">
 						<img alt="" src="book/<%=b.getBphoto()%>"
 							style="width: 40%; height: auto" class="img-thumblin">
-						<div class="a"><%=b.getBname()%>
-						</div>
+						<div class="a"><%=b.getBname()%></div>
 						<div class="a text-primary">
 							<i class="fa-solid fa-at"></i>
-							<%=b.getBauthor()%>
-						</div>
+							<%=b.getBauthor()%></div>
 						<div class="a">
 							Category: <b class="text-warning"><%=b.getBcategory()%></b>
 						</div>

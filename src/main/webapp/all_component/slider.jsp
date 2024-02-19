@@ -1,4 +1,4 @@
-<div id="carouselExampleControls" class="carousel slide" 
+ <div id="carouselExampleControls" class="carousel slide" 
 	data-ride="carousel">
 	<div class="carousel-inner "  style="height:400px; width:100%">
 		<div class="carousel-item active">

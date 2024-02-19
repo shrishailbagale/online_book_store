@@ -16,7 +16,7 @@
 </head>
 <body style="background-color: #f0f1f2;">
 	<%@include file="all_component/navbar.jsp"%>
-	<c:if test="${not empty userobj}">
+	<c:if test="${empty userobj}">
 		<c:redirect url="login.jsp" />
 	</c:if>
 	<%
@@ -48,28 +48,28 @@
 										value="${userobj.name }">
 								</div>
 								<div class="form-group col-md-6">
-									<label for="inputEmail">Email</label> <input type="email"
-										class="form-control" id="inputEmail" value="<%=u.getEmail()%>">
+									<label for="inputEmail">Email</label> <input type="email" name="email"
+										class="form-control" id="inputEmail" value="${userobj.email }">
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputMobile">Mobile Number</label> <input
-										type="number" class="form-control" id="inputMobile"
+										type="number" class="form-control" id="inputMobile" name="phone"
 										value="<%=u.getPhone()%>">
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputAddress">Address</label> <input type="text"
-										class="form-control" id="inputAddress"
+										class="form-control" id="inputAddress" name="address"
 										value="<%=u.getAddress()%>">
 								</div>
 								<div class="form-group col-md-6">
-									<label for="inputCity">City</label> <input type="text"
+									<label for="inputCity">City</label> <input type="text" name="city"
 										class="form-control" id="inputCity" value="<%=u.getCity()%>">
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputState">State</label>
 									<!--- India states -->
 									<select class="form-control" id="country-state"
-										name="country-state">
+										name="state">
 										<option class="bg-primary text-white"><%=u.getState()%></option>
 										<option value="Andaman and Nicobar Islands">Andaman
 											and Nicobar Islands</option>
@@ -115,13 +115,13 @@
 
 								<div class="form-group col-md-6">
 									<label for="inputPincode">Pincode/ zip</label> <input
-										type="number" class="form-control" id="inputPincode"
+										type="number" class="form-control" id="inputPincode" name="pincode"
 										value="<%=u.getPincode()%>">
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputCity">Enter Correct Password</label> <input
-										type="text" class="form-control" id="inputCity"
-										value="<%=u.getPassword()%>">
+										type="password" class="form-control" id="inputPassword"
+										 name="password">
 								</div>
 								<div>
 									<button class="btn btn-warning">Change</button>

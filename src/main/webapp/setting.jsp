@@ -51,7 +51,7 @@ a {
 				</a>
 			</div>
 			<div class="col-md-6">
-				<a href="#">
+				<a href="edit_profile.jsp">
 					<div class="card">
 						<div class="card-body">
 							<i class="fa-solid fa-pen-to-square fa-3x text-primary"></i>

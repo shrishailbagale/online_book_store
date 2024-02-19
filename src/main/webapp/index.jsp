@@ -46,7 +46,7 @@
 	%> 
 
 	<%@include file="all_component/navbar.jsp"%>
-	<div class="container">
+	<div class="container-flud">
 		<%@include file="all_component/slider.jsp"%>
 	</div>
 
@@ -185,10 +185,8 @@
 	<!-- End New Book -->
 	<hr>
 	<!-- Start Old Book -->
-	<div class="container" style="background-color: #fcfcfc;">
-		<h4 class="text-center text-primary">
-			<b class="text-danger" id="oldbook">--- Old Books ---</b>
-		</h4>
+	<div class="container" id ="newbook" style="background-color: #fcfcfc;">
+		<h4 class="text-center text-primary text-danger">--- Old Books ---</h4>
 		<div class="row">
 			<%
 			BookDAOImpl dao3 = new BookDAOImpl(DBConnect.getConn());

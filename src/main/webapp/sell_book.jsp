@@ -16,6 +16,10 @@
 </head>
 <body style="background-color: #f0f1f2;">
 
+	<c:if test="${empty userobj }">
+		<c:redirect url="login.jsp" />
+	</c:if>
+
 	<%
 	User u = (User) session.getAttribute("userobj");
 	%>
@@ -29,8 +33,19 @@
 			<div class="offset-md-1">
 				<div class="card">
 					<div class="card-body">
-						<form action="../add_book" method="post"
+
+						<c:if test="${not empty success }">
+							<p class="text-center text-success">${success }</p>
+							<c:remove var="success" scope="session" />
+						</c:if>
+						<c:if test="${empty failed }">
+							<p class="text-center text-danger">${failed }</p>
+							<c:remove var="failed" scope="session" />
+						</c:if>
+						<form action="add_old_book" method="post"
 							enctype="multipart/form-data">
+
+							<input type="hidden" value="${userobj.email }" name="user">
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="exampleInputPassword1">Book Name</label> <input
@@ -54,16 +69,7 @@
 								</div>
 								<button type="submit" class="btn btn-primary col-md-3">Sell
 									Book</button>
-								<div class="form-group col-md-8 h3">
-									<c:if test="${not empty success }">
-										<p class="text-center text-success">${success }</p>
-										<c:remove var="success" scope="session" />
-									</c:if>
-									<c:if test="${empty failed }">
-										<p class="text-center text-danger">${failed }</p>
-										<c:remove var="failed" scope="session" />
-									</c:if>
-								</div>
+								<div class="form-group col-md-8 h3"></div>
 							</div>
 						</form>
 					</div>

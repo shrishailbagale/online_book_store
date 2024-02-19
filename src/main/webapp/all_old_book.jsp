@@ -1,6 +1,7 @@
 <%@page import="java.util.List"%>
 <%@page import="com.DB.DBConnect"%>
 <%@page import="com.entity.BookDtls"%>
+<%@page import="com.entity.User"%>
 <%@page import="com.DAO.BookDAOImpl"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -15,7 +16,9 @@
 </head>
 <body>
 	<%@include file="all_component/navbar.jsp"%>
-	
+	<%
+	User u = (User) session.getAttribute("userobj");
+	%>	
 	<c:if test="${not empty addCart}">
 		<div id="toast">${addCart}</div>
 		<script type="text/javascript">
@@ -38,11 +41,11 @@
 			List<BookDtls> list3 = dao3.getAllOldBook();
 			for (BookDtls b : list3) {
 			%>
-			<div class="col-md-3">
-				<div class="card crd-ho">
+			<div class="col-md-4">
+				<div class="card crd-ho mt-2">
 					<div class="card-body text-center">
 						<img alt="" src="book/<%=b.getBphoto()%>"
-							style="width: 40%; height: auto" class="img-thumblin"><br>
+							style="width: 40%; height: auto" class="img-thumblin">
 						<div class="a"><%=b.getBname()%></div>
 						<div class="a text-primary">
 							<i class="fa-solid fa-at"></i>
@@ -62,6 +65,11 @@
 				%>
 			</div>
 		</div>
+		
 	</div>
 </body>
 </html>
+
+
+
+

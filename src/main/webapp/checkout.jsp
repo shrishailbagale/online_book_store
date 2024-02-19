@@ -107,7 +107,7 @@
 										<td><%=c.getBauthor()%></td>
 										<td><%=c.getBprice()%></td>
 										<td><a
-											href="remove_book?bid=<%=c.getCid()%>&&uid=<%=c.getUid()%>"
+											href="remove_book?bid=<%=c.getBid()%>&&uid=<%=c.getUid()%>&&cid=<%=c.getCid() %>"
 											class="btn btn-danger btn-sm">Remove</a></td>
 									</tr>
 									<%

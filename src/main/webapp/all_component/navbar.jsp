@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="col-md-4 text-success">
 			<h3 class="text-danger">
-				<i class="fas fa-book"></i> E-Book Management System
+				<i class="fas fa-book"></i> Online Book Store
 			</h3>
 		</div>
 		<div class="col-md-4">
